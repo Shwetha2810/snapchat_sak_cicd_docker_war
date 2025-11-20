@@ -49,7 +49,9 @@ pipeline {
         stage('Docker Tag the Image') {
             steps {
                 echo "Tagging the Docker image..."
-                sh 'sudo docker tag snapchat-sak-cicd-docker sakit333/snapchat-sak-cicd-docker:latest'
+                sh 'sudo docker tag snapchat-sak-cicd-docker shwe12/snapchat-sak-cicd-docker:latest'
+
+
             }
             post {
                 success {
