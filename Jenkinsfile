@@ -65,7 +65,8 @@ pipeline {
         stage('Docker Push the Image') {
             steps {
                 echo "Pushing the Docker image to DockerHub..."
-                sh 'sudo docker push sakit333/snapchat-sak-cicd-docker:latest'
+                sh 'sudo docker push shwe12/snapchat-sak-cicd-docker:latest'
+
             }
             post {
                 success {
@@ -80,7 +81,7 @@ pipeline {
             steps {
                 echo "Cleaning up local Docker images..."
                 sh '''
-                    sudo docker rmi sakit333/snapchat-sak-cicd-docker:latest
+                    sudo docker rmi shwe12/snapchat-sak-cicd-docker:latest
                     sudo docker rmi snapchat-sak-cicd-docker
                 '''
             }
